@@ -600,7 +600,7 @@ html, body {
 	position: relative;	
 	&::after{
 		content: '';
-		background: url('./img/icons/arrow.svg');
+		background: url('../img/icons/arrow.svg');
 		position: absolute;
 		width: 13px;
 		height: 9px;
@@ -634,7 +634,7 @@ html, body {
 	}
 
 	&__rowOne {	
-		background: url('./img/pic/2/modern.png') 0 0/100% 100% no-repeat;	
+		background: url('../img/pic/2/modern.png') 0 0/100% 100% no-repeat;	
 	}
 	&__modern {
 		position: relative;
@@ -686,7 +686,7 @@ html, body {
 		
 	}	
 	&__rowTwo-row-One{
-		background: url('./img/pic/2/geometric.png') 0 0/100% 100% no-repeat;
+		background: url('../img/pic/2/geometric.png') 0 0/100% 100% no-repeat;
 	}
 
 	&__geometric {
@@ -702,7 +702,7 @@ html, body {
 		
 	}
 	&__rowTwo-row-Two{
-		background: url('/img/pic/2/minimal.png') 0 0/100% 100% no-repeat;
+		background: url('../img/pic/2/minimal.png') 0 0/100% 100% no-repeat;
 	}
 	&__minimal {
 		position: absolute;
@@ -962,7 +962,7 @@ html, body {
 
 	&__body-1 {
 		//position: absolute;
-		background: url('./img/pic/offer/1.png') 0 0/100% 100% no-repeat;
+		background: url('../img/pic/offer/1.png') 0 0/100% 100% no-repeat;
 	}
 
 	&__body-1-background {
@@ -1031,7 +1031,7 @@ html, body {
 	}
 	&__body-2 {
 		//position: absolute;
-		background: url('./img/pic/offer/2.png') 0 0/100% 100% no-repeat;
+		background: url('../img/pic/offer/2.png') 0 0/100% 100% no-repeat;
 	}
 
 	&__body-2-background {
@@ -1250,23 +1250,23 @@ html, body {
 
 	&__articles-body-1 {	
 		position: relative;	
-		background: url('./img/pic/OurLatestArticles/1.1.png') 0 0/100% 100% no-repeat;	
+		background: url('../img/pic/OurLatestArticles/1.1.png') 0 0/100% 100% no-repeat;	
 		border-radius: 8px;	
 		
 	}
 	&__articles-body-2 {	
 		position: relative;	
-		background: url('./img/pic/OurLatestArticles/1.2.png') 0 0/100% 100% no-repeat;	
+		background: url('../img/pic/OurLatestArticles/1.2.png') 0 0/100% 100% no-repeat;	
 		border-radius: 8px;	
 	}
 	&__articles-body-3 {	
 		position: relative;	
-		background: url('./img/pic/OurLatestArticles/2.1.png') 0 0/100% 100% no-repeat;	
+		background: url('../img/pic/OurLatestArticles/2.1.png') 0 0/100% 100% no-repeat;	
 		border-radius: 8px;	
 	}
 	&__articles-body-4 {	
 		position: relative;	
-		background: url('./img/pic/OurLatestArticles/2.2.png') 0 0/100% 100% no-repeat;	
+		background: url('../img/pic/OurLatestArticles/2.2.png') 0 0/100% 100% no-repeat;	
 		border-radius: 8px;	
 		//background: linear-gradient (0 deg, rgba(0, 0, 0, 0.4);
 	}
