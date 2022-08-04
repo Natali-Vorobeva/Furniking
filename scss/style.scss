@@ -116,31 +116,43 @@ html, body {
 	&__search {
 		display: grid;
 		grid-template-columns: 23% rem(620) 23%;
-		grid-template-columns: minmax(10%, 23%) minmax(rem(280), rem(620)) minmax(rem(80), rem(140));
+		grid-template-columns: rem(250) minmax(rem(280), rem(620)) minmax(rem(80), rem(140));
 		grid-template-rows: rem(92);
 		padding: 20px 0px 0px 0px;
+		@media(max-width:992px){
+			grid-template-columns: rem(250) rem(417) minmax(rem(80), rem(140));			
+		}
+		@media (max-width:767px){
+			grid-template-columns: rem(80) rem(417) minmax(rem(80), rem(140));			
+		}
 		// @media(max-width:992px){
 		// 	grid-template-columns: 10% auto 23%;
 		// 	grid-template-rows: rem(92);
 		// }
+		@media (max-width:533px){
+			grid-template-columns: rem(60) rem(417) minmax(rem(80), rem(140));	
+		}
 	}
 	&__logo {
 		//margin: 0px 120px 0px 0px;
 	}
 	&__logo-big {
 		margin: 0px 0px 0px 10px;
-		@media(max-width:992px){
+		@media(max-width:767px){
 			display: none;
 		}
 		//margin: 0px 120px 0px 0px;
 	}
 	&__logo-small {
-		margin: 0px 0px 0px 20px;
-		@media(min-width:992px){
+		margin: 0px 0px 0px 10px;
+		@media(min-width:767px){
 			display: none;			
 		}
 	}
-	&__search-input-accordion{		
+	&__search-input-accordion{	
+		@media(max-width:992px){
+
+		}
 	}
 
 	// &__form {
@@ -178,6 +190,9 @@ html, body {
 		justify-content: start;		
 		width: rem(403);
 		margin: 0px 0px 0px 10px;
+		@media(max-width:992px){
+			width: rem(200);
+		}
 	}
 	&__input-style{
 		max-width: rem(403);
@@ -215,6 +230,12 @@ html, body {
 			&:not(:last-child){
 				margin: 0px 10px 0px 0px;
 			}
+			@media (max-width:550px){
+				width: rem(20);
+				&:not(:last-child){
+					margin: 0px 5px 0px 0px;
+				}
+			}
 		}
 	}
 
@@ -235,9 +256,10 @@ html, body {
 }
 .home-grid {
 	display: grid;
+	max-width: rem(1172);
 	grid-template: 
 		[start] "collectionTitle homeNav" rem(67) [row2]
-		[row2] "collectionDetails show-collection " rem(455) [row-end] / 22.18% 77%;
+		[row2] "collectionDetails show-collection " rem(455) [row-end] / rem(260) 65%;
 	@media(min-width:992px){
 			
 		// grid-template-columns: rem(260) rem(910);		
@@ -275,23 +297,32 @@ html, body {
 			
 		}
 		@media(max-width:992px){
-			//grid-area: homeNav;
-			//max-width: rem(500);
-			//text-align: right;
+			
 		
 		}
 		display: flex;
 		align-items: center;
 		padding: 0px 0px 0px rem(82);
 		background: #F7F8FA;
+		@media (max-width:660px){
+			padding: 0px 0px 0px rem(30);
+		}
 		&>a{
 			color: #555555;
 			font-family: 'Rubik';
-			font-size: 14px;
+			font-size: rem(14);
 			font-weight: 400;			
 			&:not(:last-child){
 				margin: 0px 35px 0px 0px;
+				
 			}
+			@media (max-width:660px){
+				&:not(:last-child){
+					margin: 0px 20px 0px 0px;
+					
+				}
+			}
+			
 		}		
 	}
 	&__collectionDetails {
@@ -340,9 +371,15 @@ html, body {
 	}
 	&__rowOne{
 		display: grid;
-		grid-template-columns: rem(371) rem(390) rem(132);
+		grid-template-columns: rem(371) rem(390) rem(86);
 			grid-template-rows: rem(415);
-		@media(max-width:992px){
+			//padding: calc(1px + (10 - 1) * ((100vw - 320px) / (1172 - 320)));
+		@media(max-width:767px){
+			grid-template: 
+			[start] "advertising advertising" rem(270) [row2]
+			[row2] "choice slider " rem(455) [row-end] / rem(400);
+			// grid-template-columns: rem(390) rem(86);
+			// grid-template-rows: rem(415) rem(415) ;
 			//display: grid;
 			// grid-template-areas: 
 			// "advertising choice
@@ -354,15 +391,14 @@ html, body {
 	}
 	&__advertising-block {
 		
-		@media(max-width:992px){
-			//grid-area: advertising;
-		}
+		
 		// grid-row-start: 1;
 		// grid-row-end: 2;
 		//grid-column-start: 1;
 	}
 	
 	&__choice {
+		
 		width: rem(350);
 		padding: 40px 0px 0px 20px;
 		&>img {
@@ -375,17 +411,16 @@ html, body {
 			// grid-column-start: 1;
 			// grid-column-end: 2;
 		}
+		@media (max-width:767px){
+			grid-area: choice;
+			
+		}
 	}
 	&__slider {
 		display: flex; 
 		flex-direction: column;
-		@media(max-width:992px){
-			//flex-direction: row;
-			//grid-area: slider;
-			// grid-row-start: 2;
-			// grid-row-end: 3;
-			// grid-column-start: 2;
-			// grid-column-end: 3;
+		@media(max-width:767px){
+			grid-area: slider;
 		}		
 	}
 	&__alternative-collection {
@@ -393,6 +428,9 @@ html, body {
 	}
 }
 .advertising-block {
+	@media(max-width:767px){
+		grid-area: advertising;		
+	}
 	&__body {
 		margin: 0px 0px 0px 15px;
 	}
@@ -1445,10 +1483,17 @@ html, body {
 	&__border{
 		display: flex;
 		justify-content: space-between;
+		border-top: 1px solid #bab9b9;
+		@media (max-width:479px){
+			//display: flex; 
+			flex-direction: column;
+			text-align: center;
+			padding: 0px 0px 20px 0px;
+		}
 	}
 	&__copyright {
 		
-		border-top: 1px solid rgba(150, 150, 150, 0.2);
+		border-top: 1px solid #c7c5c5;
 	}
 	&__column-copyright {
 		margin: 33px 0px 35px 0px;		
@@ -1456,16 +1501,23 @@ html, body {
 	&__column-nav {
 		display: flex;
 		justify-content: center;
-		align-items: center;	
+		align-items: center;
+		
+			
+		
 		&>a{
 			color: #555555;
 			font-family: 'Rubik';
 			font-weight: 4;
 			font-size: 14px;
 			&:not(:last-child){
-				margin: 0px 52px 0px 0px;
+				margin: 0px 52px 0px 0px;			
 			}
-
+			@media (max-width:550px){
+				&:not(:last-child){
+					margin: 0px 15px 0px 0px;					
+				}
+			}
 		}	
 	}
 }
