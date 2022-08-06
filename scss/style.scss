@@ -247,7 +247,8 @@ html, body {
 .main {
 	&__home {
 	}
-	&__home-grid {			
+	&__home-grid {		
+		position: relative;	
 		
 	}
 
@@ -255,11 +256,12 @@ html, body {
 	}
 }
 .home-grid {
+	//position: relative;
 	display: grid;
 	max-width: rem(1172);
 	grid-template: 
 		[start] "collectionTitle homeNav" rem(67) [row2]
-		[row2] "collectionDetails show-collection " rem(455) [row-end] / rem(260) 65%;
+		[row2] "collectionDetails show-collection " rem(455) [row-end] / rem(260) auto;
 	@media(min-width:992px){
 			
 		// grid-template-columns: rem(260) rem(910);		
@@ -291,52 +293,46 @@ html, body {
 			padding: 0px 0px 0px 0px;			
 		}		
 	}
-	&__homeNav {
-		grid-area: homeNav;
-		@media(min-width:992px){
-			
-		}
-		@media(max-width:992px){
-			
-		
-		}
-		display: flex;
-		align-items: center;
-		padding: 0px 0px 0px rem(82);
-		background: #F7F8FA;
-		@media (max-width:660px){
-			padding: 0px 0px 0px rem(30);
-		}
-		&>a{
-			color: #555555;
-			font-family: 'Rubik';
-			font-size: rem(14);
-			font-weight: 400;			
-			&:not(:last-child){
-				margin: 0px 35px 0px 0px;
-				
+	&__burger{
+		display: none;
+		@media (max-width:767px){
+			display: block;
+			position: relative;
+			width: 30px;
+			height: 20px;
+			&::before, &::after{
+				content: '';
+				background-color: #2F2F2F;
+				position: absolute;
+				width: 100%;
+				height: 2px;
 			}
-			@media (max-width:660px){
-				&:not(:last-child){
-					margin: 0px 20px 0px 0px;
-					
-				}
+			&::before{
+				top: 0;
 			}
-			
-		}		
+			&::after{
+				bottom: 0;
+			}
+			&>span{
+				position: absolute;
+				color: #555555;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				top: 9px;
+			}
+		}
 	}
+	&__homeNav {}
+		
 	&__collectionDetails {
-		@media(min-width:992px){
-			grid-area: collectionDetails;
-		}
-		@media(max-width:992px){
-			display: none;
-		}
-		display: grid;
-		grid-template-columns: rem(260);
-		grid-template-rows: repeat(11, rem(41.2));
-		background: #F7F8FA;
-		&>a{
+		grid-area: collectionDetails;
+		@media(min-width:992px){	
+			display: grid;
+			grid-template-columns: rem(260);
+			grid-template-rows: repeat(11, rem(42));
+			background: #F7F8FA;	
+			&>a{
 			font-family: 'Rubik';
 			font-size: 14px;
 			font-weight: 400;
@@ -347,7 +343,11 @@ html, body {
 			padding: 0px 0px 0px 30px;
 			color: #555555;
 			border-bottom: 0.8px solid #E3E3E3;
+		}	
 		}
+		@media(max-width:992px){
+			display: none;
+		}		
 	}
 	&__show-collection{		
 	}
@@ -547,9 +547,146 @@ html, body {
 	line-height: 8px;
 	text-align: center;
 }
+.homeNav {
+	grid-area: homeNav;
+	position: relative;
 
+	//display: flex;
+	//justify-content: space-around;
+	//z-index: 2;
+	&::before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #F7F8FA;
+		z-index: 13;
+	}
 
+	&__adaptive{
+		@media (max-width:767px){
+		// 	display: grid;
+		// 	grid-template-columns: auto rem(10px);		
+		// grid-template-rows: rem(67);
+		}
+	}
+	&__burger-flex{
+		display: flex;
+		justify-content: space-around;
+	}
+	&__burger-1 {		
+	}
+	&__burger-2 {		
+	}
+	&__burger-3 {		
+	}
+	&__burger-4{		
+		cursor: pointer;
+		@media (max-width:767px){
+			//grid-area: burger;
+			margin: 0px 10px 0px 0px;
+			position: relative;
+			z-index: 14;			
+			display: block;
+			width: rem(30);
+			height: 20px;
+			&::before, &::after{
+				content: '';			
+				background-color: #2F2F2F;
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				//right: 0;
+			}
+			&::before{
+				top: 15px;
+				transition: all 0.3s ease 0s;
+				//right: 0;
+			}
+			&::after{
+				bottom: -15px;
+				transition: all 0.3s ease 0s;
+				
+			}
+			&>span{
+				position: absolute;
+				background-color: #2F2F2F;
+				right: 0;
+				width: 100%;
+				height: 2px;
+				top: 24px;
+				transition: all 0.3s ease 0s;
+			}
+		}
+		&.active {
+			&::before {
+				transform: rotate(45deg);	
+				top: 24px;			
+			}
+		}
+		&.active {
+			&::after {
+				transform: rotate(-45deg);	
+				bottom: -6px;			
+			}
+		}
+		&.active span{
+			transform: scale(0);
+		}
+		
+	}
+	&__menu{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		
+		z-index: 100;
+		height: rem(56);
+		&.active{
+			left: 0;
+			transition: all 0.3s ease 0s;
+			//overflow: auto;
+		}
+		@media (max-width:767px){
+			left: 1120%;
+			padding: 20px 0px 150px 0px;	
+			margin: 40px 60px 0px 60px;		
+			display: block;			
+			background: #7AC751;			
+		}		
+		&>ul{
+		color: #555555;
+		font-family: 'Rubik';
+		font-size: rem(14);
+		font-weight: 400;			
+		&:not(:last-child){
+			margin: 0px 35px 0px 0px;	
+			@media (max-width:767px){
+				margin: 0px 0px 7px 5px;
+				
+				
+			}		
+		}
+		@media (max-width:767px){
+			margin: 0px 0px 0px 5px;
+			color: #FFFFFF;
+			font-size: rem(24);
+			
+			//padding: 0px 0px 0px 70px;
+			//display: flex;
+			//justify-content: start;
+			//min-height: 100%;
+			//margin: 0px 0px 50px 0px;
+			
+		}		
+	}	
+	}
+}
 
+//__adaptive
 // ! ***       
 //smallCard              
 //  ! ********************
@@ -761,6 +898,7 @@ html, body {
 	}
 	&__links-trending {			
 	}
+	
 
 	&__links-products {
 		font-family: 'Mulish';
@@ -798,19 +936,24 @@ html, body {
 
 	&__shell {
 		//padding-left: 12.5625rem;
-		text-align: center;
+		
 		&>a{
-			font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1172 - 320)));
+			font-size: rem(24);
 			@media (max-width:767px){
 				display: flex; 
 				flex-direction: column;
+				text-align: center;
+				&:not(:last-child){
+					margin: 0px 0px 15px 0px;
+				}
 				
 			}
 		}
 
 	}
 
-	&__link {
+	&__links {
+		text-align: center;
 	}
 }
 ._title {
@@ -824,9 +967,20 @@ html, body {
 	}
 	
 	.links-trending {
-		margin-left: 18.75rem;	
+		//margin-left: 18.75rem;	
 		margin-bottom: 73px;
-		
+		font-size: rem(24);
+		&__shell{
+			@media (max-width:767px){
+				display: flex;
+				flex-direction: column;
+				text-align: center;
+				&:not(:last-child){
+					margin: 0px 0px 20px 0px;
+				}
+			}
+			
+		}
 		
 		&__links{
 			font-family: 'Mulish';
@@ -841,7 +995,7 @@ html, body {
 	}
 	._gray {
 		color: #C2C2C2;
-		margin: 0px 0px 0px 70px;
+		//margin: 0px 0px 0px 70px;
 	}
 	._name{
 		text-transform: uppercase;
