@@ -79,14 +79,32 @@ html, body {
 	}
 
 	&__language {
-		&>a{
-			color: #fff;
-		}
+		display: flex;
+		position: relative;
+		
 		padding: 0px 20px 0px 0px;
 		border-right: 2.2px solid #fff;
 		&>img{
-			margin: 5px 0px 0px 3px;
+			margin: 0px 0px 0px 5px;
 		}
+	}
+	&__language-choice{
+		position: absolute;
+		top: 0;
+		right: rem(80);
+		display: flex;
+		&>li{
+			//position: relative;
+		}
+		&>li>a{
+			color: #fff;
+		}
+		&>img{
+			
+		}
+	}
+	&__language-image{
+
 	}
 
 	&__authorization {
