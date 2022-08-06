@@ -394,8 +394,8 @@ html, body {
 			//padding: calc(1px + (10 - 1) * ((100vw - 320px) / (1172 - 320)));
 		@media(max-width:767px){
 			grid-template: 
-			[start] "advertising advertising" rem(270) [row2]
-			[row2] "choice slider " rem(455) [row-end] / rem(400);
+			[start] "advertising slider" rem(270) [row2]
+			[row2] "choice slider " rem(455) [row-end] / rem(600) ;
 			// grid-template-columns: rem(390) rem(86);
 			// grid-template-rows: rem(415) rem(415) ;
 			//display: grid;
@@ -439,6 +439,7 @@ html, body {
 		flex-direction: column;
 		@media(max-width:767px){
 			grid-area: slider;
+			margin: 140px 0px 0px 0px;
 		}		
 	}
 	&__alternative-collection {
