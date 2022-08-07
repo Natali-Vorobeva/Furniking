@@ -55,6 +55,10 @@ html, body {
 	@media(max-width:992px){
 		padding: 0px 10px;
 	}
+	&__menu{}
+	&__submenu{}
+	&__submenu-eng{}			
+	&__submenu-ru{}
 	
 	&__columnOne{
 		// display: flex; 
@@ -99,11 +103,16 @@ html, body {
 		&>li>a{
 			color: #fff;
 		}
-		&>img{
-			
+		&>img{			
+		}
+		&>a.parent{
+			margin: 0px 0px 0px 0px;
 		}
 	}
 	&__language-image{
+		width: rem(12);
+		cursor: pointer;
+		margin: 7px 0px 0px 5px;
 
 	}
 
@@ -113,6 +122,9 @@ html, body {
 		}
 		padding: 0px 0px 0px 22px;
 	}
+}
+body.mouse .header-items__language-choice>li:hover {
+	display: block;
 }
 
 
@@ -605,18 +617,21 @@ html, body {
 		cursor: pointer;
 		@media (max-width:767px){
 			//grid-area: burger;
-			margin: 0px 10px 0px 0px;
+			margin: 0px 10px 30px 0px;
+			padding: 30px 0px 0px 0px;
 			position: relative;
 			z-index: 14;			
 			display: block;
 			width: rem(30);
 			height: 20px;
+			//padding: 0px 0px -110px 0px;
 			&::before, &::after{
 				content: '';			
 				background-color: #2F2F2F;
 				position: absolute;
 				width: 100%;
 				height: 2px;
+				//left: 20px;
 				//right: 0;
 			}
 			&::before{
@@ -625,7 +640,8 @@ html, body {
 				//right: 0;
 			}
 			&::after{
-				bottom: -15px;
+				bottom: -6px;
+				//left: 20px;
 				transition: all 0.3s ease 0s;
 				
 			}
@@ -642,13 +658,13 @@ html, body {
 		&.active {
 			&::before {
 				transform: rotate(45deg);	
-				top: 24px;			
+				top: 30px;			
 			}
 		}
 		&.active {
 			&::after {
 				transform: rotate(-45deg);	
-				bottom: -6px;			
+				bottom: -3px;			
 			}
 		}
 		&.active span{
@@ -661,7 +677,7 @@ html, body {
 		justify-content: center;
 		align-items: center;
 		position: relative;
-		
+		text-transform: uppercase;
 		z-index: 100;
 		height: rem(56);
 		&.active{
