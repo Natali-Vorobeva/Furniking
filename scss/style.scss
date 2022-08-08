@@ -123,9 +123,9 @@ html, body {
 		padding: 0px 0px 0px 22px;
 	}
 }
-body.mouse .header-items__language-choice>li:hover {
-	display: block;
-}
+// body.mouse .header-items__language-choice>li:hover {
+// 	display: block;
+// }
 
 
 
@@ -287,6 +287,7 @@ body.mouse .header-items__language-choice>li:hover {
 }
 .home-grid {
 	//position: relative;
+	min-width: 100%;
 	display: grid;
 	max-width: rem(1172);
 	grid-template: 
@@ -957,12 +958,26 @@ body.mouse .header-items__language-choice>li:hover {
 	&__switch-block {
 		display: flex;
 		justify-content: center;
-		&>img{
-			// &:not(:last-child){
-			// 	margin: 0px 14px 0px 0px;
-			// }
-		}
 		
+		
+	}
+	&__switch-img-buttons{
+		&>img{
+			&:not(:last-child){
+				margin: 0px 10px 0px 0px;
+			}
+			//margin: 0px -20px 0px 0px;
+		}
+		margin: 0px 0px 0px 0px;
+	}
+	&__switch-button-background{
+		//position: relative;
+		margin: 0px 0px 0px -50px;
+		&>input{
+			width: 24px;
+			opacity: 0;
+
+		}
 	}
 }
 .links-products {

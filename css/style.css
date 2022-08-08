@@ -110,10 +110,6 @@ html, body {
   color: #fff;
 }
 
-body.mouse .header-items__language-choice > li:hover {
-  display: block;
-}
-
 .main {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
@@ -264,6 +260,7 @@ body.mouse .header-items__language-choice > li:hover {
 }
 
 .home-grid {
+  min-width: 100%;
   display: -ms-grid;
   display: grid;
   max-width: 73.25rem;
@@ -923,6 +920,23 @@ body.mouse .header-items__language-choice > li:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.main__switch-img-buttons {
+  margin: 0px 0px 0px 0px;
+}
+
+.main__switch-img-buttons > img:not(:last-child) {
+  margin: 0px 10px 0px 0px;
+}
+
+.main__switch-button-background {
+  margin: 0px 0px 0px -50px;
+}
+
+.main__switch-button-background > input {
+  width: 24px;
+  opacity: 0;
 }
 
 .links-products {

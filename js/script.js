@@ -6,23 +6,23 @@
 // };
 
 
-// page.classList.remove('circleGray');
-// page.classList.add('circle');
-// function changeImage('main__switch-block') {
-// 	form.pic.src = form.imagename.value;
-//  }
-// function changeImage() {
-// 	var temp = document.getElementById("pic1").src;
-// 	document.getElementById("pic1").src = document.getElementById("pic2").src;
-// 	document.getElementById("pic2").src = temp;
-// }
+page.classList.remove('circleGray');
+page.classList.add('circleGreen');
+function changeImage() {
+	form.pic.src = form.imagename.value;
+}
+function changeImage() {
+	let temp = document.getElementById("_circleGray").src;
+	document.getElementById("_circleGray").src = document.getElementById("_circleGreen").src;
+	document.getElementById("_circleGreen").src = temp;
+}
 
-// $(document).ready(function() {
-// 	$('.homeNav__burger-4').click(function(event) {
-// 		$('homeNav__burger-4,.homeNav__menu').toggleClass('active');
-// 		$('body').toggleClass('lock');
-// 	});
-// });
+$(document).ready(function() {
+	$('.homeNav__burger-4').click(function(event) {
+		$('homeNav__burger-4,.homeNav__menu').toggleClass('active');
+		$('body').toggleClass('lock');
+	});
+});
 $(document).ready(function () {
 	$('.homeNav__burger-4').click(function (event) {
 		$('.homeNav__burger-4,.homeNav__menu').toggleClass('active');
