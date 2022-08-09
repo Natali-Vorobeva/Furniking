@@ -144,6 +144,7 @@ body.mouse .header-items__language-choice>li:hover {
 	//display: table-row;
 	flex: 1 0 auto;
 	&__search {
+		position: relative;
 		display: grid;
 		grid-template-columns: 23% rem(620) 23%;
 		grid-template-columns: rem(250) minmax(rem(280), rem(620)) minmax(rem(80), rem(140));
@@ -183,27 +184,17 @@ body.mouse .header-items__language-choice>li:hover {
 		@media(max-width:992px){
 
 		}
+	}	
+	&__icons-logo {		
+		position: absolute;
+		z-index: 15;
+		top: rem(120);
+		left: rem(255);	
+		
 	}
-
-	// &__form {
-	// 	display: inline-flex;	
-	// 	width: rem(220);
-	// 	&::after{
-	// 		content: '';
-	// 		background: url('/img/icons/checkSmall.svg');
-	// 		width: 5px;
-	// 		height: 4.75px;
-	// 		top: 25px;
-	// 		left: 130px;
-	// 	}
-	// 	&>img{
-	// 		width: 15px;
-	// 		height: 4.75px;
-	// 		border-radius: 0.3px;
-	// 	}
-	// }
-	&__icons-logo {
-	}
+}
+.icons-logo__3{
+	width: rem(19);
 }
 
 .search-input-accordion{
@@ -275,10 +266,13 @@ body.mouse .header-items__language-choice>li:hover {
 // ! ********************
 
 .main {
+	max-width: 100%;
 	&__home {
+		
 	}
 	&__home-grid {		
 		position: relative;	
+		
 		
 	}
 
@@ -357,10 +351,14 @@ body.mouse .header-items__language-choice>li:hover {
 		
 	&__collectionDetails {
 		grid-area: collectionDetails;
-		@media(min-width:992px){	
+		@media(min-width:992px){
+			grid-area: collectionDetails;	
 			display: grid;
 			grid-template-columns: rem(260);
-			grid-template-rows: repeat(11, rem(42));
+
+			grid-template-rows: rem(41) rem(41) rem(41) rem(41) rem(41) rem(41) rem(41) 
+			rem(41) rem(41) rem(41) rem(41);
+			//grid-template-rows: repeat(11, 2,5625rem);
 			background: #F7F8FA;	
 			&>a{
 			font-family: 'Rubik';
@@ -464,6 +462,7 @@ body.mouse .header-items__language-choice>li:hover {
 	}
 	&__body {
 		margin: 0px 0px 0px 15px;
+		position: relative;
 	}
 	&__title {
 		font-family: 'Rubik';
@@ -650,7 +649,7 @@ body.mouse .header-items__language-choice>li:hover {
 				background-color: #2F2F2F;
 				right: 0;
 				width: 100%;
-				height: 2px;
+				height: 3px;
 				top: 24px;
 				transition: all 0.3s ease 0s;
 			}
@@ -681,6 +680,7 @@ body.mouse .header-items__language-choice>li:hover {
 		z-index: 100;
 		height: rem(56);
 		&.active{
+			top: 0;
 			left: 0;
 			transition: all 0.3s ease 0s;
 			//overflow: auto;
@@ -688,7 +688,7 @@ body.mouse .header-items__language-choice>li:hover {
 		@media (max-width:767px){
 			left: 1120%;
 			padding: 20px 0px 150px 0px;	
-			margin: 40px 60px 0px 60px;		
+			margin: 0px 60px 0px 60px;		
 			display: block;			
 			background: #7AC751;			
 		}		
