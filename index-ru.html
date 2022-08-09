@@ -36,10 +36,11 @@
 								<ul class="header-items__submenu">
 									<li class="header-items__submenu-eng"><a href="index.html">Английский (USD)</a></li>
 									<li class="header-items__submenu-ru"><a href="#">Русский (RUB)</a></li>
-								</ul>										
-								<li class="header-items__language-image arrow"><a href="#" ><img  src="./img/icons/checkMark.svg" alt=""></a></li>				
-								</ul>							
-							
+								</ul>
+								<li class="header-items__language-image arrow"><a href="#"><img
+											src="./img/icons/checkMark.svg" alt=""></a></li>
+							</ul>
+
 						</nav>
 						<div class="header-items__authorization">
 							<a href="#">Вход или регистрация</a>
@@ -110,28 +111,28 @@
 							<img class="icons-logo__3" src="./img/icons/search/3.png" alt="">
 						</div> -->
 						<!-- <div class="homeNav__adaptive"> -->
-							<div class="homeNav__burger-flex">
-								<div class="homeNav__burger-1">
-									<span></span>
-								</div>
-								<div class="homeNav__burger-2">
-									<span></span>
-								</div>
-								<div class="homeNav__burger-3">
-									<span></span>
-								</div>
-								
-								<div class="homeNav__burger-4">
-									<span></span>
-								</div>
-							</div>							
-							<nav class="homeNav__menu">
-								<ul href="#">Главная</ul>
-								<ul href="#">Магазин</ul>
-								<ul href="#">Блог</ul>
-								<ul href="#">О нас</ul>
-								<ul href="#">Связаться с нами</ul>
-							</nav>
+						<div class="homeNav__burger-flex">
+							<div class="homeNav__burger-1">
+								<span></span>
+							</div>
+							<div class="homeNav__burger-2">
+								<span></span>
+							</div>
+							<div class="homeNav__burger-3">
+								<span></span>
+							</div>
+
+							<div class="homeNav__burger-4">
+								<span></span>
+							</div>
+						</div>
+						<nav class="homeNav__menu">
+							<ul href="#">Главная</ul>
+							<ul href="#">В магазин</ul>
+							<ul href="#">Блог</ul>
+							<ul href="#">О нас</ul>
+							<ul href="#">Связаться с нами</ul>
+						</nav>
 						<!-- </div> -->
 					</div>
 					<div class="home-grid__collectionDetails">
@@ -156,7 +157,8 @@
 											<p>ЛУЧШИЕ КОЛЛЕКЦИИ 2022</p>
 										</div>
 										<h1 class="advertising-block__info">Мы предлагаем мебель Вашей мечты</h1>
-										<div class="advertising-block__stock-info">Получите скидку 50% на все товары</div>
+										<div class="advertising-block__stock-info">Получите скидку 50% на все товары
+										</div>
 										<a class="advertising-block__button" href="#">Перейти в магазин</a>
 									</div>
 								</div>
@@ -220,7 +222,7 @@
 						<div class="smallCard__body1">
 							<img class="smallCard__image" src="./img/icons/1.4/freeShipping.svg" alt="">
 							<div class="smallCard__info">
-								<div class="smallCard__title">Бесплатная<br/> доставка</div>
+								<div class="smallCard__title">Бесплатная<br /> доставка</div>
 								<!-- <div class="smallCard__text">Orders over $100</div> -->
 							</div>
 						</div>
@@ -228,7 +230,7 @@
 							<img class="smallCard__image" src="./img/icons/1.4/giftCard.svg" alt="">
 							<div class="smallCard__info">
 								<div class="smallCard__title">
-									<p>Подарочная <br/>карта</p>
+									<p>Подарочная <br />карта</p>
 								</div>
 								<!-- <div class="smallCard__text">
 									<p>Buy $1000 to get card</p>
@@ -240,14 +242,14 @@
 						<div class="smallCard__body1">
 							<img class="smallCard__image" src="./img/icons/1.4/payment.svg" alt="">
 							<div class="smallCard__info">
-								<div class="smallCard__title">Быстрая<br/> оплата</div>
+								<div class="smallCard__title">Быстрая<br /> оплата</div>
 								<!-- <div class="smallCard__text">100% secure payment</div> -->
 							</div>
 						</div>
 						<div class="smallCard__body2">
 							<img class="smallCard__image" src="./img/icons/1.4/support.svg" alt="">
 							<div class="smallCard__info">
-								<div class="smallCard__title">24/7<br/> Поддержка</div>
+								<div class="smallCard__title">24/7<br /> Поддержка</div>
 								<!-- <div class="smallCard__text">Quick support</div> -->
 							</div>
 						</div>
@@ -412,7 +414,7 @@
 							<img src="./img/pic/trending/1.4.png" alt="">
 							<div class="product-cards__name _name">Стул</div>
 							<div class="product-cards__description">
-								Кресло Buskbo 
+								Кресло Buskbo
 							</div>
 							<div class="product-cards__discounts">
 								<div class="product-cards__price _price">
@@ -516,8 +518,12 @@
 				</div>
 				<div class="main__switch">
 					<div class="main__switch-block">
-						<img class="_circleGray" src="./img/icons/circleGray.png" alt="">
-						<img class="_circle" src="./img/icons/circle.svg" alt="">
+						<img id="pic1" src="./img/icons/circleGray.png" alt="">
+						<img id="pic2" src="./img/icons/circle.svg" alt="">
+						<div class="main__switch-block__input">
+							<input type="button" value="Кнопка" onclick="changeImage()">
+							<input type="button" value="Кнопка" onclick="changeImage()">
+						</div>
 					</div>
 				</div>
 			</div>
@@ -613,7 +619,7 @@
 						<a class="links-products__link _gray" href="#">
 							Лидеры продаж</a>
 						<a class="links-products__link _gray" href="#">
-							Новые поступления</a>						
+							Новые поступления</a>
 					</div>
 
 				</div>
@@ -953,7 +959,7 @@
 			</div>
 		</footer>
 	</div>
-	
+
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 	<script src="./js/script.js"></script>
 </body>

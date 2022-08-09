@@ -1,4 +1,4 @@
-// let page = document.getElementsByClassName('.main__switch-block')
+// let page = document.getElementsByClassName('main__switch-block')
 // let themeButton = document.getElementsByClassName('_circleGray');
 // themeButton.onclick = function () {
 // 	page.getElementsByClassName.toggle('_circleGray');
@@ -6,13 +6,13 @@
 // };
 
 
-// page.classList.remove('circleGray');
-// page.classList.add('circle');
-// function changeImage('main__switch-block') {
+// page.classList.remove('_circleGray');
+// page.classList.add('_circle');
+// function changeImage() {
 // 	form.pic.src = form.imagename.value;
 //  }
 // function changeImage() {
-// 	var temp = document.getElementById("pic1").src;
+// 	let temp = document.getElementById("pic1").src;
 // 	document.getElementById("pic1").src = document.getElementById("pic2").src;
 // 	document.getElementById("pic2").src = temp;
 // }
@@ -23,6 +23,16 @@
 // 		$('body').toggleClass('lock');
 // 	});
 // });
+
+function changeImage() {
+    var temp = document.getElementById("pic1").src;
+    document.getElementById("pic1").src = document.getElementById("pic2").src;
+    document.getElementById("pic2").src = temp;
+}
+
+
+
+
 $(document).ready(function () {
 	$('.homeNav__burger-4').click(function (event) {
 		$('.homeNav__burger-4,.homeNav__menu').toggleClass('active');
@@ -53,14 +63,14 @@ let isMobile = {
 let body = document.querySelector('body');
 if (isMobile.any()) {
 	body.classList.add('touch');
-	let arrow= document.querySelectorAll('.arrow');
-	for(i=0; i<arrow.length; i++){
-		let thisLink=arrow[i].previousElementSibling;
-		let subMenu=arrow[i].nextElementSibling;
-		let thisArrow=arrow[i];
+	let arrow = document.querySelectorAll('.arrow');
+	for (i = 0; i < arrow.length; i++) {
+		let thisLink = arrow[i].previousElementSibling;
+		let subMenu = arrow[i].nextElementSibling;
+		let thisArrow = arrow[i];
 
 		thisLink.classList.add('parent');
-		arrow[i].addEventListener('click', function(){
+		arrow[i].addEventListener('click', function () {
 			subMenu.classList.toggle('open');
 			thisLink.classList.toggle('active');
 		})

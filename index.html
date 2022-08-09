@@ -15,12 +15,13 @@
 
 <body>
 	<div class="wrapper">
-		<!-- <form name="form1">
-			<img id="pic1" src="/img/pic/offer/1.png" alt="">
-			<img id="pic2" src="/img/pic/offer/2.png" alt="">
-			<br>
-			<input type="button" value="Кнопка" onclick="changeImage()">
-		</form> -->
+		<form class="form1">
+			<!-- <img class="pic1" src="./img/pic/offer/1.png" alt="">
+			<img id="pic2" src="./img/pic/offer/2.png" alt="">
+			<br> -->
+			<!-- <input type="button" value="Кнопка" onclick="changeImage()">
+			<input type="button" value="Кнопка" onclick="changeImage()"> -->
+		</form>
 		<header class="header">
 			<div class="header__container _container">
 				<div class="header__items header-items">
@@ -35,11 +36,13 @@
 								<li class="header-items__menu  arrow"><a href="#">English (USD)</a></li>
 								<ul class="header-items__submenu">
 									<li class="header-items__submenu-eng"><a href="#">English (USD)</a></li>
-									<li class="header-items__submenu-ru"><a href="./index-ru.html">Russian (RUB)</a></li>
-								</ul>										
-								<li class="header-items__language-image arrow"><a href="#" ><img  src="./img/icons/checkMark.svg" alt=""></a></li>				
-								</ul>							
-							
+									<li class="header-items__submenu-ru"><a href="./index-ru.html">Russian (RUB)</a>
+									</li>
+								</ul>
+								<li class="header-items__language-image arrow"><a href="#"><img
+											src="./img/icons/checkMark.svg" alt=""></a></li>
+							</ul>
+
 						</nav>
 						<div class="header-items__authorization">
 							<a href="#">Login or Sign up</a>
@@ -110,28 +113,28 @@
 							<img class="icons-logo__3" src="./img/icons/search/3.png" alt="">
 						</div> -->
 						<!-- <div class="homeNav__adaptive"> -->
-							<div class="homeNav__burger-flex">
-								<div class="homeNav__burger-1">
-									<span></span>
-								</div>
-								<div class="homeNav__burger-2">
-									<span></span>
-								</div>
-								<div class="homeNav__burger-3">
-									<span></span>
-								</div>
-								
-								<div class="homeNav__burger-4">
-									<span></span>
-								</div>
-							</div>							
-							<nav class="homeNav__menu">
-								<ul href="#">HOME</ul>
-								<ul href="#">SHOP</ul>
-								<ul href="#">BLOG</ul>
-								<ul href="#">ABOUT</ul>
-								<ul href="#">CONTACT US</ul>
-							</nav>
+						<div class="homeNav__burger-flex">
+							<div class="homeNav__burger-1">
+								<span></span>
+							</div>
+							<div class="homeNav__burger-2">
+								<span></span>
+							</div>
+							<div class="homeNav__burger-3">
+								<span></span>
+							</div>
+
+							<div class="homeNav__burger-4">
+								<span></span>
+							</div>
+						</div>
+						<nav class="homeNav__menu">
+							<ul href="#">HOME</ul>
+							<ul href="#">SHOP</ul>
+							<ul href="#">BLOG</ul>
+							<ul href="#">ABOUT</ul>
+							<ul href="#">CONTACT US</ul>
+						</nav>
 						<!-- </div> -->
 					</div>
 					<div class="home-grid__collectionDetails">
@@ -517,8 +520,13 @@
 				</div>
 				<div class="main__switch">
 					<div class="main__switch-block">
-						<img class="_circleGray" src="./img/icons/circleGray.png" alt="">
-						<img class="_circle" src="./img/icons/circle.svg" alt="">
+						<img id="pic1" src="./img/icons/circleGray.png" alt="">
+						<img id="pic2" src="./img/icons/circle.svg" alt="">
+						<div class="main__switch-block__input">
+							<input type="button" value="Кнопка" onclick="changeImage()">
+							<input type="button" value="Кнопка" onclick="changeImage()">
+						</div>
+
 					</div>
 				</div>
 			</div>
@@ -614,7 +622,7 @@
 						<a class="links-products__link _gray" href="#">
 							Best Sellers</a>
 						<a class="links-products__link _gray" href="#">
-							New Arrivals</a>						
+							New Arrivals</a>
 					</div>
 
 				</div>
@@ -955,7 +963,7 @@
 			</div>
 		</footer>
 	</div>
-	
+
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 	<script src="./js/script.js"></script>
 </body>

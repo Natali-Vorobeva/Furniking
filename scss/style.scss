@@ -958,11 +958,26 @@ body.mouse .header-items__language-choice>li:hover {
 		display: flex;
 		justify-content: center;
 		&>img{
-			// &:not(:last-child){
-			// 	margin: 0px 14px 0px 0px;
-			// }
+			width: 24px;
+			height: 24px;
+			&:not(:last-child){
+				margin: 0px 14px 0px 0px;
+			}
 		}
 		
+	&__input{
+		margin: 0px 0px 0px -75px;
+		&>input{
+			width: 24px;
+			height: 24px;
+			&:not(:last-child){
+				margin: 0px 10px 0px 0px;
+			}
+			opacity: 0;
+			//margin: 0px 0px 0px -30px;
+		}
+
+	}
 	}
 }
 .links-products {
